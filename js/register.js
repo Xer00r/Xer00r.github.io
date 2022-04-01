@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
             password: formData.get("password"),
         }
 
-        const url = `https://kobis-global-server.herokuapp.com/`
+        const url = `https://kobis-global-server.herokuapp.com/api/v1/teams/register`
 
         const response = await fetch(url, {
             method: "POST",
