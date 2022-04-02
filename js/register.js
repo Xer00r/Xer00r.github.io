@@ -22,7 +22,6 @@ window.addEventListener("DOMContentLoaded", () => {
             headers: {
                 "Content-Type": "application/json",
             },
-            mode: 'no-cors',
             body: JSON.stringify(userData),
         })
 
@@ -36,7 +35,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 JSON.stringify({ clubName, managerName, email, id })
             )
 
-            window.location.href = `/success.html`
+            window.location.href = `./success.html`
         }
     }
 
