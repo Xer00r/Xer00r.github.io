@@ -20,7 +20,8 @@
         if(!team) window.location.href = `./login.html`
         else {
             const {manager} = JSON.parse(team)
-            document.querySelector('span').textContent = `${manager}!`
+            let firstName = manager.split(' ')[0]
+            document.querySelector('span').textContent = `${firstName}!`
         }
     </script>
 </body>
