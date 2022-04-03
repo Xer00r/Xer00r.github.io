@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (response.status === 200) {
             const result = await response.json()
             localStorage.setItem('team', JSON.stringify(result))
-            window.location.href = `./dashboard.html`
+            window.location.href = `./loading-dashboard.html`
         } 
         else if(response.status === 400) window.location.href = `./success.html`
         else if(response.status === 401) {
