@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/dashboard.css">
 </head>
 <body>
-    <h1 class="greeting">Hey, <span>James!</span></h1>
+    <h1 class="greeting">Hey, <span></span></h1>
     <h1>We’re working on your dashboard. It’ll take a while but we’ll get it ready</h1>
     <div class="spinner-container">
         <div class="spinner">
@@ -16,8 +16,12 @@
         </div>
     </div>
     <script>
-        if(!localStorage.getItem('team')) window.location.href = './login.html'
+        const team = localStorage.getItem("team")
+        if(!team) window.location.href = `./login.html`
+        else {
+            const {manager} = team
+            document.querySelector('span').textContent = `${manager}!`
+        }
     </script>
-    <script src="./js/dashboard.js"></script>
 </body>
 </html>
