@@ -32,9 +32,10 @@ window.addEventListener('DOMContentLoaded', () => {
         } 
         else if(response.status === 400) window.location.href = `./success.html`
         else if(response.status === 401) {
-            errorMessage.textContent = response.message
+            const {message} = response.json()
+            errorMessage.textContent = message
             errorMessage.classList.add('show')
-            console.log(response.message)
+            console.log(message)
         }
     }
 

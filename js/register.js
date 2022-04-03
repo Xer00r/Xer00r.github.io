@@ -18,31 +18,31 @@ window.addEventListener("DOMContentLoaded", () => {
 
         const url = `https://kobis-global-server.herokuapp.com/api/v1/teams/register`
 
-        if (userData.password.length < 8) {
+        if (userData.password.length >= 8) {
+
+            if (userData.password === formData.get("confirmPassword")) {
+                const response = await fetch(url, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    mode: "cors",
+                    body: JSON.stringify(userData),
+                })
+    
+                if (response.status === 201) {
+                    const result = await response.json()
+                    window.location.href = `./success.html`
+                }
+            } else {
+                errorMessage.textContent = `Passwords do not match!`
+                errorMessage.classList.add('show')
+            }
+        } else {
             errorMessage.textContent = `Password too short!`
             errorMessage.classList.add('show')
         }
-
-        // is the password 1 and password 2 the same?
-        if (userData.password === formData.get("confirmPassword")) {
-            const response = await fetch(url, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                mode: "cors",
-                body: JSON.stringify(userData),
-            })
-
-            if (response.status === 201) {
-                const result = await response.json()
-                console.log(result)
-                window.location.href = `./success.html`
-            }
-        } else {
-            errorMessage.textContent = `Passwords do not match!`
-            errorMessage.classList.add('show')
-        }
+        
     }
 
     form.addEventListener("submit", submitForm)
