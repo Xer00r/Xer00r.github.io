@@ -131,4 +131,9 @@
     .container .sidebar footer.footer .sign-out-button i {
         font-size: 5rem;
     }
+
+    .container .main-content {
+        left: 6rem;
+    }
+    
 }
