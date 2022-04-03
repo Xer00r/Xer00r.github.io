@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
         } 
         else if(response.status === 400) window.location.href = `./success.html`
         else if(response.status === 401) {
-            errorMessage.textContent = `Incorrect username or password`
+            errorMessage.textContent = `Incorrect email or password`
             errorMessage.classList.add('show')
         }
     }
