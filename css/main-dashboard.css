@@ -116,8 +116,8 @@
     }
 
     .container .sidebar .navigation .nav-items .nav-link {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 4rem;
+        height: 4rem;
     }
 
     .container .sidebar .navigation .nav-items .nav-link a i {
@@ -129,7 +129,7 @@
     }
 
     .container .sidebar footer.footer .sign-out-button i {
-        font-size: 5rem;
+        font-size: 5.5rem;
     }
 
     .container .main-content {
