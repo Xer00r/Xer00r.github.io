@@ -19,7 +19,7 @@
         const team = localStorage.getItem("team")
         if(!team) window.location.href = `./login.html`
         else {
-            const {manager} = team
+            const {manager} = JSON.parse(team)
             document.querySelector('span').textContent = `${manager}!`
         }
     </script>
