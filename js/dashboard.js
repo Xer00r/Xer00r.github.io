@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
     const team = localStorage.getItem("team")
+    const nameSpan = document.querySelector('span')
     const { manager } = JSON.parse(team)
-    document.querySelector("p").textContent += manager
+    nameSpan.textContent = manager + '!'
 })

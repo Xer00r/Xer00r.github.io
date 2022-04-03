@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kobis Global Football | Dashboard</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
 </head>
 <body>
-    <h1>Dashboard</h1>
-    <p>Welcome, </p>
+    <h1 class="greeting">Hey, <span></span></h1>
+    <h1>We’re working on your dashboard. It’ll take a while but we’ll get it ready</h1>
+    <div class="spinner-container">
+        <div class="spinner">
+
+        </div>
+    </div>
     <script>
-        if(!localStorage.getItem('team')) window.location.href = '/login.html'
+        if(!localStorage.getItem('team')) window.location.href = './login.html'
     </script>
     <script src="./js/dashboard.js"></script>
 </body>
