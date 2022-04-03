@@ -16,38 +16,39 @@
                     <h2>Welcome!</h2>
                     <p>Create your team account</p>
                 </div>
+                <p class="error-message" id="error-msg"></p>
                 <form class="profile-form" enctype="multipart/form-data" method="post">
                     <div class="form-input">
-                        <input type="text" name="clubName" id="club-name" placeholder="Club Name" class="input">
+                        <input type="text" name="clubName" id="club-name" placeholder="Club Name" class="input" required>
                         <i class="fas fa-users"></i>
                     </div>
 
                     <div class="form-input">
-                        <input type="text" name="managerName" id="manager-name" placeholder="Manager Name" class="input">
+                        <input type="text" name="managerName" id="manager-name" placeholder="Manager Name" class="input" required>
                         <i class="fas fa-user"></i>
                     </div>
         
                     <div class="form-input">
-                        <input type="email" name="email" id="club-email" placeholder="E-mail" class="input">
+                        <input type="email" name="email" id="club-email" placeholder="E-mail" class="input" required>
                         <i class="fas fa-envelope"></i>
                     </div>
 
                     <div class="form-input">
-                        <input type="number" name="clubPhone" id="club-phone" placeholder="Telephone" class="input">
+                        <input type="number" name="clubPhone" id="club-phone" placeholder="Telephone" class="input" required>
                         <i class="fas fa-phone"></i>
                     </div>
 
                     <div class="form-input">
-                        <input type="password" name="password" placeholder="Password" id="password" class="input">
+                        <input type="password" name="password" placeholder="Password" id="password" class="input" required>
                         <i class="fas fa-lock"></i>
                     </div>
 
                     <div class="form-input">
-                        <input type="password"  placeholder="Password" id="confirm-password" class="input">
+                        <input type="password" name="confirmPassword"  placeholder="Password" id="confirm-password" class="input" required>
                         <i class="fas fa-lock"></i>
                     </div>
                     <div class="footer-content">
-                        <a href="#">Forgot Password?</a>
+                        <a href="./login.html">I have an account</a>
                     </div>
                     <button type="submit" class="submit-button" id="submit-btn">Register <i class="fas fa-arrow-right"></i></button>
                 </form>

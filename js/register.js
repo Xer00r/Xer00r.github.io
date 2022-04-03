@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
     const form = document.forms[0]
+    const errorMessage = document.getElementById("error-msg")
 
     // fucntion to submit form
     const submitForm = async e => {
@@ -17,26 +18,30 @@ window.addEventListener("DOMContentLoaded", () => {
 
         const url = `https://kobis-global-server.herokuapp.com/api/v1/teams/register`
 
-        const response = await fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            mode: 'cors',
-            body: JSON.stringify(userData),
-        })
+        if (userData.password.length < 8) {
+            errorMessage.textContent = `Password too short!`
+            errorMessage.classList.add('show')
+        }
 
-        if (response.status === 201) {
-            const result = await response.json()
-            console.log(result)
-            const { clubName, managerName, email, id, message } = result
+        // is the password 1 and password 2 the same?
+        if (userData.password === formData.get("confirmPassword")) {
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                mode: "cors",
+                body: JSON.stringify(userData),
+            })
 
-            localStorage.setItem(
-                "team",
-                JSON.stringify({ clubName, managerName, email, id })
-            )
-
-            window.location.href = `./success.html`
+            if (response.status === 201) {
+                const result = await response.json()
+                console.log(result)
+                window.location.href = `./success.html`
+            }
+        } else {
+            errorMessage.textContent = `Passwords do not match!`
+            errorMessage.classList.add('show')
         }
     }
 
