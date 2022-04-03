@@ -32,11 +32,8 @@ window.addEventListener('DOMContentLoaded', () => {
         } 
         else if(response.status === 400) window.location.href = `./success.html`
         else if(response.status === 401) {
-            const data = response.json()
-            const {message} = JSON.parse(JSON.stringify(data))
-            errorMessage.textContent = message
+            errorMessage.textContent = `Incorrect username or password`
             errorMessage.classList.add('show')
-            console.log(message)
         }
     }
 
