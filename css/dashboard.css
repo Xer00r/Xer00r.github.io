@@ -48,21 +48,21 @@ h1.greeting span {
 }
 
 .spinner-container {
-    width: 30rem;
-    height: 30rem;
+    width: 20rem;
+    height: 20rem;
     position: relative;
 }
 
-.spinner-container .spinner {
+.spinner-container .spinner::after {
     width: 100%;
     height: 100%;
-    content: "Hello";
+    content: "";
     position: absolute;
     border-radius: 50%;
     bottom: 0;
     right: 0;
-    border: 3rem solid rgb(220, 220, 220);
+    border: 2rem solid rgb(220, 220, 220);
     border-bottom-color: rgb(45, 88, 245);
     will-change: transform;
-    animation: 2s linear infinite spinner;
+    animation: 1.5s linear infinite spinner;
 }

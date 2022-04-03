@@ -1,23 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kobis Global Football | Dashboard</title>
-    <link rel="stylesheet" href="./css/dashboard.css">
-</head>
-<body>
-    <h1 class="greeting">Hey, <span></span></h1>
-    <h1>We’re working on your dashboard. It’ll take a while but we’ll get it ready</h1>
-    <div class="spinner-container">
-        <div class="spinner">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./assets/icons/css/all.css" />
+        <link rel="stylesheet" href="./css/main-dashboard.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar show-nav">
+                <nav class="navigation">
+                    <ul class="nav-items">
+                        <li class="nav-link">
+                            <a href="#" title="Dashboard">
+                                <i class="fat fa-home"></i>
+                            </a>
+                        </li>
 
+                        <li class="nav-link">
+                            <a href="#" title="Squad">
+                                <i class="fat fa-users"></i>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" title="Add Player">
+                                <i class="fat fa-user"></i>
+                            </a>
+                        </li>
+                        <li class="nav-link" title="Edit Squad">
+                            <a href="#">
+                                <i class="fat fa-gear"></i>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" title="Notifications">
+                                <i class="fat fa-bell"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <footer class="footer">
+                    <button class="sign-out-button" id="sign-out-btn">
+                        <i class="fat fa-sign-out-alt"></i>
+                    </button>
+                </footer>
+            </div>
+            <div class="main-content" id="main-content">
+                <header class="header">
+                    <div class="greeting-message">
+                        <p>Hello, Coach.</p>
+                        <button style="font-size: 3rem; cursor: pointer;" id="toggle">toggle menu</button>
+                    </div>
+                </header>
+            </div>
         </div>
-    </div>
-    <script>
-        if(!localStorage.getItem('team')) window.location.href = './login.html'
-    </script>
-    <script src="./js/dashboard.js"></script>
-</body>
+
+        <script src="./js/dashboard.js"></script>
+        <script>
+            const logoutButton = document.getElementById("sign-out-btn")
+
+            logoutButton.addEventListener("click", logout)
+
+            function logout() {
+                const team = localStorage.getItem("team")
+                if (team) {
+                    localStorage.removeItem("team")
+                    window.location.href = `./login.html`
+                }
+            }
+        </script>
+    </body>
 </html>
