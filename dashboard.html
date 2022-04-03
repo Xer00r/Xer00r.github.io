@@ -60,15 +60,15 @@
         <script src="./js/dashboard.js"></script>
         <script>
             const logoutButton = document.getElementById("sign-out-btn")
+            const team = localStorage.getItem("team")
+
+            if(!team) window.location.href = `./login.html`
 
             logoutButton.addEventListener("click", logout)
 
             function logout() {
-                const team = localStorage.getItem("team")
-                if (team) {
-                    localStorage.removeItem("team")
-                    window.location.href = `./login.html`
-                }
+                localStorage.removeItem("team")
+                window.location.href = `./login.html`
             }
         </script>
     </body>
