@@ -24,7 +24,7 @@ window.addEventListener("DOMContentLoaded", () => {
         input.onchange = async _ => {
             // you can use this method to get file and perform respective operations
             let file = input.files[0]
-            const url = `https://kobis-global-server/api/v1/teams/${_id}/profile-image/upload`
+            const url = `http://localhost:5000/api/v1/teams/${_id}/profile-image/upload`
 
             const response = await fetch(url, {
                 method: 'POST',
