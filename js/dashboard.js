@@ -7,37 +7,48 @@ window.addEventListener("DOMContentLoaded", () => {
     const imageSeelectButton = document.getElementById("image-select-button")
     const clubName = document.getElementById("team_name")
     const managerName = document.getElementById("manager_name")
+    const profileImage = document.getElementById("profile-image")
     const team = JSON.parse(localStorage.getItem("team"))
     let isNavOpen = true
 
     logoutButton.addEventListener("click", logout)
-    imageSeelectButton.addEventListener("click", uploadImage)
+    imageSeelectButton.addEventListener("click", selectImage)
 
-    const {name, manager, _id} = team
+    const { name, manager, _id } = team
     clubName.textContent = name
     managerName.textContent = manager
 
-         function uploadImage() {
+    function selectImage() {
         let input = document.createElement("input")
         input.type = "file"
-        input.name = "myImage"
-        input.onchange = async _ => {
-            // you can use this method to get file and perform respective operations
-            let file = input.files[0]
-            const url = `http://localhost:5000/api/v1/teams/${_id}/profile-image/upload`
+        input.addEventListener('change', uploadImage)
+
+        async function uploadImage(e) {
+            const file = e.target.files[0]
+            const formData = new FormData()
+
+            formData.append("myImage", file)
+            formData.append("json", {"hello" : "hello"})
+            
+            const url = `https://kobis-global-server/api/v1/teams/${_id}/profile-image/upload`
 
             const response = await fetch(url, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'image/png'
-                },
-                body: file
+                body: formData
             })
-            console.log(response.json())
+
+            const data = await response.json()
+            localStorage.setItem('teamImageURL', JSON.stringify(data))
+            
+            window.location.href = `./dashboard.html`
+            
         }
+
         input.click()
     }
 
+    let imageSRC = JSON.parse(localStorage.getItem("teamImageURL"))
+    profileImage.src = imageSRC.imageURL
     function logout() {
         localStorage.removeItem("team")
         window.location.href = `./login.html`

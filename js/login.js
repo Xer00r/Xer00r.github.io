@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
             password: formData.get('password')
         }
 
-        const url = `https://kobis-global-server.herokuapp.com/api/v1/teams/login`
+        const url = `https://kobis-global-server/api/v1/teams/login`
 
         const response = await fetch(url, {
             method: "POST",
@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (response.status === 200) {
             const result = await response.json()
             localStorage.setItem('team', JSON.stringify(result))
-            window.location.href = `./loading-dashboard.html`
+            window.location.href = `./dashboard.html`
         } 
         else if(response.status === 400) window.location.href = `./success.html`
         else if(response.status === 401) {

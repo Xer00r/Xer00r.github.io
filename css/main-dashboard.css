@@ -215,6 +215,17 @@
     .main
     .profile-container
     .profile-image-wrapper
+    .profile-image img{
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+.container
+    .main-content
+    .main
+    .profile-container
+    .profile-image-wrapper
     .profile-image
     .image-select-btn {
     position: absolute;
