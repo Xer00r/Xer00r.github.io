@@ -5,14 +5,22 @@ window.addEventListener("DOMContentLoaded", () => {
     const mainContent = document.getElementById("main-content")
     const logoutButton = document.getElementById("sign-out-btn")
     const imageSeelectButton = document.getElementById("image-select-button")
+    const clubName = document.getElementById("team_name")
+    const managerName = document.getElementById("team_name")
+    const team = JSON.parse(localStorage.getItem("team"))
     let isNavOpen = true
 
     logoutButton.addEventListener("click", logout)
     imageSeelectButton.addEventListener("click", uploadImage)
 
+    const {name, manager} = team
+    clubName.textContent = name
+    managerName.textContent = manager
+
     function uploadImage() {
         let input = document.createElement("input")
         input.type = "file"
+        input.name = "club_image"
         input.onchange = _ => {
             // you can use this method to get file and perform respective operations
             let file = input.files[0]
