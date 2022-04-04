@@ -1,6 +1,9 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
-    padding: 0;box-sizing: border-box;
+    padding: 0;
+    box-sizing: border-box;
     font-size: 62.5%;
     list-style: none;
     text-decoration: none;
@@ -65,7 +68,7 @@
     font-size: 3.5rem;
     color: rgb(0, 0, 0);
     position: relative;
-    top: -.5rem;
+    top: -0.5rem;
 }
 
 .container .sidebar footer.footer {
@@ -94,7 +97,7 @@
 .container .sidebar footer.footer .sign-out-button i {
     font-size: 6rem;
     position: relative;
-    top: -.5rem;
+    top: -0.5rem;
     color: rgb(33, 33, 33);
 }
 
@@ -115,6 +118,9 @@
     display: flex;
     align-items: center;
     padding: 0 1rem;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    z-index: 99;
+    background-color: #fff;
 }
 
 .container .main-content .header .hamburger {
@@ -127,31 +133,29 @@
 .container .main-content .header .hamburger span.burger {
     display: block;
     width: 2.5rem;
-    height: .3rem;
+    height: 0.3rem;
     background-color: rgb(49, 49, 49);
     position: relative;
-    top: calc(50% - .3rem);
+    top: calc(50% - 0.3rem);
     transition: 300ms;
 }
 
 .container .main-content .header .hamburger span.burger::before {
-    content: '';
+    content: "";
     width: 90%;
-    height: .2rem;
+    height: 0.3rem;
     position: absolute;
-    top: -.6rem;
+    top: -0.6rem;
     background-color: rgb(49, 49, 49);
     transition: 300ms;
 }
 
-
-
 .container .main-content .header .hamburger span.burger::after {
-    content: '';
+    content: "";
     width: 80%;
-    height: .2rem;
+    height: 0.3rem;
     position: absolute;
-    top: .7rem;
+    top: 0.7rem;
     background-color: rgb(49, 49, 49);
     transition: 300ms;
 }
@@ -162,13 +166,85 @@
 
 .container .main-content .header .hamburger span.burger.active::before {
     width: 100%;
-    transform: rotate(45deg) translate(.7rem, .5rem);
+    transform: rotate(45deg) translate(0.7rem, 0.5rem);
 }
 
 .container .main-content .header .hamburger span.burger.active::after {
     width: 100%;
-    transform: rotate(-45deg) translate(.3rem, -.3rem);
+    transform: rotate(-45deg) translate(0.3rem, -0.3rem);
 }
+
+.container .main-content .main {
+    position: relative;
+    top: 5rem;
+}
+
+.container .main-content .main .profile-container {
+    width: 100%;
+    height: 35rem;
+    /* background-color: rgb(213, 213, 213); */
+}
+
+.container .main-content .main .profile-container .profile-image-wrapper {
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(203, 203, 203); */
+}
+
+.container
+    .main-content
+    .main
+    .profile-container
+    .profile-image-wrapper
+    .profile-image {
+    width: 20rem;
+    height: 20rem;
+    background-color: rgb(238, 238, 238);
+    border-radius: 50%;
+    position: relative;
+}
+
+.container
+    .main-content
+    .main
+    .profile-container
+    .profile-image-wrapper
+    .profile-image
+    .image-select-btn {
+        position: absolute;
+        bottom: 1.7rem;
+        right: 1.7rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: rgb(213, 213, 213);
+}
+
+.container
+    .main-content
+    .main
+    .profile-container
+    .profile-image-wrapper
+    .profile-image
+    .image-select-btn:hover {
+        cursor: pointer;
+    }
+
+.container
+    .main-content
+    .main
+    .profile-container
+    .profile-image-wrapper
+    .profile-image
+    .image-select-btn i{
+        font-size: 2.2rem;
+        position: relative;
+        top: -.3rem;
+        color: rgb(77, 77, 77);
+    }
 
 .container .main-content.nav-closed {
     width: 100%;
@@ -195,7 +271,7 @@
 
     .container .sidebar footer.footer .sign-out-button i {
         font-size: 5.5rem;
-    } 
+    }
 
     .container .main-content {
         left: 6rem;
