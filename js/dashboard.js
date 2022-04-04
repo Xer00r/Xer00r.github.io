@@ -40,7 +40,7 @@ window.addEventListener("DOMContentLoaded", () => {
             const data = await response.json()
             localStorage.setItem('teamImageURL', JSON.stringify(data))
             
-            window.location.href = `./dashboard.html`
+            window.location.href = `./index.html`
             
         }
 
