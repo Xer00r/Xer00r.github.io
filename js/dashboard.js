@@ -47,8 +47,8 @@ window.addEventListener("DOMContentLoaded", () => {
         input.click()
     }
 
-    // let imageSRC = JSON.parse(localStorage.getItem("teamImageURL"))
-    // profileImage.src = imageSRC.imageURL
+    let imageSRC = JSON.parse(localStorage.getItem("teamImageURL"))
+    profileImage.src = imageSRC.imageURL
     function logout() {
         localStorage.removeItem("team")
         window.location.href = `./login.html`
