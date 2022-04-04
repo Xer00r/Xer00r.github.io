@@ -47,14 +47,15 @@ window.addEventListener("DOMContentLoaded", () => {
         input.click()
     }
 
-    let imageSRC = JSON.parse(localStorage.getItem("teamImageURL"))
-    profileImage.src = imageSRC.imageURL
+    // let imageSRC = JSON.parse(localStorage.getItem("teamImageURL"))
+    // profileImage.src = imageSRC.imageURL
     function logout() {
         localStorage.removeItem("team")
         window.location.href = `./login.html`
     }
 
     toggleButton.addEventListener("click", e => {
+        console.log('clicked ' + Date.now())
         if (!isNavOpen) {
             navbar.classList.add("show-nav")
             mainContent.classList.remove("nav-closed")
