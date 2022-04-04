@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const logoutButton = document.getElementById("sign-out-btn")
     const imageSeelectButton = document.getElementById("image-select-button")
     const clubName = document.getElementById("team_name")
-    const managerName = document.getElementById("team_name")
+    const managerName = document.getElementById("manager_name")
     const team = JSON.parse(localStorage.getItem("team"))
     let isNavOpen = true
 
