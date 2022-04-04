@@ -187,7 +187,7 @@
 
 .container .main-content .main .profile-container .profile-image-wrapper {
     width: 100%;
-    height: 25rem;
+    height: 22rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -214,13 +214,13 @@
     .profile-image-wrapper
     .profile-image
     .image-select-btn {
-        position: absolute;
-        bottom: 1.7rem;
-        right: 1.7rem;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        background-color: rgb(213, 213, 213);
+    position: absolute;
+    bottom: 1.7rem;
+    right: 1.7rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: rgb(213, 213, 213);
 }
 
 .container
@@ -230,8 +230,8 @@
     .profile-image-wrapper
     .profile-image
     .image-select-btn:hover {
-        cursor: pointer;
-    }
+    cursor: pointer;
+}
 
 .container
     .main-content
@@ -239,12 +239,32 @@
     .profile-container
     .profile-image-wrapper
     .profile-image
-    .image-select-btn i{
-        font-size: 2.2rem;
-        position: relative;
-        top: -.3rem;
-        color: rgb(77, 77, 77);
-    }
+    .image-select-btn
+    i {
+    font-size: 2.2rem;
+    position: relative;
+    top: -0.3rem;
+    color: rgb(77, 77, 77);
+}
+
+.container .main-content .main .profile-container .team-info-wrapper {
+    width: 100%;
+    height: 6rem;
+    /* background-color: red; */
+}
+
+.container .main-content .main .profile-container .team-info-wrapper .team-name,
+.container .main-content .main .profile-container .team-info-wrapper .manager-name {
+    font-size: 3rem;
+    font-family: Montserrat;
+    font-weight: 600;
+    color: rgb(73, 73, 73);
+    text-align: center;
+}
+.container .main-content .main .profile-container .team-info-wrapper .manager-name {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
 
 .container .main-content.nav-closed {
     width: 100%;
