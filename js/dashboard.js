@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
             formData.append("myImage", file)
             formData.append("json", {"hello" : "hello"})
             
-            const url = `https://kobis-global-server/api/v1/teams/${_id}/profile-image/upload`
+            const url = `https://kobis-global-server.herokuapp.com/api/v1/teams/${_id}/profile-image/upload`
 
             const response = await fetch(url, {
                 method: 'POST',

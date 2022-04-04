@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
             password: formData.get("password"),
         }
 
-        const url = `https://kobis-global-server/api/v1/teams/register`
+        const url = `https://kobis-global-server.herokuapp.com/api/v1/teams/register`
 
         if (userData.password.length >= 8) {
 
