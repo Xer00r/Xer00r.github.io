@@ -27,6 +27,7 @@
     top: 0;
     z-index: 999;
     transition: 300ms;
+    border-right: 1px solid rgb(208, 208, 208);
 }
 
 .container .sidebar.show-nav {
@@ -99,10 +100,74 @@
 
 .container .main-content {
     width: 95%;
-    background-color: rgb(206, 206, 206);
+    /* background-color: rgb(228, 228, 228); */
     position: relative;
     left: 8rem;
     transition: 300ms;
+}
+
+.container .main-content .header {
+    /* background-color: rgb(3, 3, 125); */
+    position: fixed;
+    width: 100%;
+    height: 5.5rem;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.container .main-content .header .hamburger {
+    width: 2.5rem;
+    height: 2rem;
+    /* background-color: red; */
+    cursor: pointer;
+}
+
+.container .main-content .header .hamburger span.burger {
+    display: block;
+    width: 2.5rem;
+    height: .3rem;
+    background-color: rgb(49, 49, 49);
+    position: relative;
+    top: calc(50% - .3rem);
+    transition: 300ms;
+}
+
+.container .main-content .header .hamburger span.burger::before {
+    content: '';
+    width: 90%;
+    height: .2rem;
+    position: absolute;
+    top: -.6rem;
+    background-color: rgb(49, 49, 49);
+    transition: 300ms;
+}
+
+
+
+.container .main-content .header .hamburger span.burger::after {
+    content: '';
+    width: 80%;
+    height: .2rem;
+    position: absolute;
+    top: .7rem;
+    background-color: rgb(49, 49, 49);
+    transition: 300ms;
+}
+
+.container .main-content .header .hamburger .burger.active {
+    background: none;
+}
+
+.container .main-content .header .hamburger span.burger.active::before {
+    width: 100%;
+    transform: rotate(45deg) translate(.7rem, .5rem);
+}
+
+.container .main-content .header .hamburger span.burger.active::after {
+    width: 100%;
+    transform: rotate(-45deg) translate(.3rem, -.3rem);
 }
 
 .container .main-content.nav-closed {
@@ -130,10 +195,9 @@
 
     .container .sidebar footer.footer .sign-out-button i {
         font-size: 5.5rem;
-    }
+    } 
 
     .container .main-content {
         left: 6rem;
     }
-    
 }
