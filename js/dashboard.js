@@ -13,18 +13,27 @@ window.addEventListener("DOMContentLoaded", () => {
     logoutButton.addEventListener("click", logout)
     imageSeelectButton.addEventListener("click", uploadImage)
 
-    const {name, manager} = team
+    const {name, manager, _id} = team
     clubName.textContent = name
     managerName.textContent = manager
 
-    function uploadImage() {
+         function uploadImage() {
         let input = document.createElement("input")
         input.type = "file"
-        input.name = "club_image"
-        input.onchange = _ => {
+        input.name = "myImage"
+        input.onchange = async _ => {
             // you can use this method to get file and perform respective operations
             let file = input.files[0]
-            console.log(file)
+            const url = `https://kobis-global-server/api/teams/${_id}/profile-image/upload`
+
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'image/png'
+                },
+                body: file
+            })
+            console.log(response.json())
         }
         input.click()
     }
