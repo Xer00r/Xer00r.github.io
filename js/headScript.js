@@ -1,6 +1,6 @@
-const team = JSON.parse(localStorage.getItem('team'))
+const teamExists = JSON.parse(localStorage.getItem('team'))
 
-const url = `https://kobis-global-server.herokuapp.com/api/v1/teams/${team._id}`
+const url = `https://kobis-global-server.herokuapp.com/api/v1/teams/${teamExists._id}`
 
 fetch(url)
 .then(res => res.json())
