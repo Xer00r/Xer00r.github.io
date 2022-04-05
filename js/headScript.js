@@ -5,9 +5,8 @@ const url = `https://kobis-global-server.herokuapp.com/api/v1/teams/${teamExists
 fetch(url)
 .then(res => res.json())
 .then(data => {
-    localStorage.setItem('team', data)
+    localStorage.setItem('team', JSON.stringify(data))
 })
 .catch(err => {
     console.log(err)
-    
 })
