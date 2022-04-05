@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squad</title>
+    <link rel="stylesheet" href="./assets/icons/css/all.css">
+    <link rel="stylesheet" href="./css/main-dashboard.css">
+    <link rel="stylesheet" href="./css/squad.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar show-nav">
+            <nav class="navigation">
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="#" title="Dashboard">
+                            <i class="fat fa-home"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#" title="Squad">
+                            <i class="fat fa-users"></i>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" title="Add Player">
+                            <i class="fat fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="nav-link" title="Edit Squad">
+                        <a href="#">
+                            <i class="fat fa-gear"></i>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" title="Notifications">
+                            <i class="fat fa-bell"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <footer class="footer">
+                <button class="sign-out-button" id="sign-out-btn">
+                    <i class="fat fa-sign-out-alt"></i>
+                </button>
+            </footer>
+        </div>
+        <div class="main-content" id="main-content">
+            <header class="header">
+                <div class="hamburger">
+                    <span class="burger active"></span>
+                </div>
+                <div class="greeting-wrapper"></div>
+            </header>
+            <div class="main">
+               <div class="squad-container" id="squad_container">
+                <div class="player-indicator" id="player_indicator">
+                    <h3>You don’t have any players</h3>
+                </div>
+        </div>
+    </div>
+    <script src="./js/menu.js"></script>
+    <script src="./js/squad.js"></script>
+</body>
+</html>

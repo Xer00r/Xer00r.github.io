@@ -20,8 +20,6 @@
     /* background-color: rgb(228, 228, 228); */
     justify-content: space-between;
     padding: 1rem 0;
-    height: 100vh;
-    overflow: hidden;
 }
 
 .container .sidebar {
@@ -34,6 +32,7 @@
     z-index: 999;
     transition: 300ms;
     border-right: 1px solid rgb(208, 208, 208);
+    background-color: #fff;
 }
 
 .container .sidebar.show-nav {
@@ -108,7 +107,7 @@
     width: 95%;
     /* background-color: rgb(228, 228, 228); */
     position: relative;
-    left: 8rem;
+    margin-left: 8rem;
     transition: 300ms;
 }
 
@@ -283,7 +282,7 @@
 
 .container .main-content.nav-closed {
     width: 100%;
-    left: 0;
+    margin-left: 0;
 }
 
 @media (max-width: 500px) {
@@ -308,9 +307,6 @@
         font-size: 5.5rem;
     }
 
-    .container .main-content {
-        left: 6rem;
-    }
 
     .container .main-content .main .profile-container .profile-image-wrapper {
         height: 20rem;
