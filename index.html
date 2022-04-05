@@ -7,6 +7,11 @@
         <title>Kobis Global Football | Dashboard</title>
         <link rel="stylesheet" href="./assets/icons/css/all.css" />
         <link rel="stylesheet" href="./css/main-dashboard.css" />
+        <script>
+            const team = localStorage.getItem("team")
+
+            if (!team) window.location.href = `./login.html`
+        </script>
         <script src="./js/headScript.js"></script>
     </head>
     <body>
@@ -53,24 +58,26 @@
                     <div class="hamburger">
                         <span class="burger active"></span>
                     </div>
-                    <div class="greeting-wrapper">
-                    </div>
+                    <div class="greeting-wrapper"></div>
                 </header>
                 <div class="main">
                     <div class="profile-container">
                         <div class="profile-image-wrapper">
                             <div class="profile-image">
-                                <img src="" alt="" id="profile-image">
-                                <button class="image-select-btn" id="image-select-button">
+                                <img src="" alt="" id="profile-image" />
+                                <button
+                                    class="image-select-btn"
+                                    id="image-select-button"
+                                >
                                     <i class="fas fa-camera"></i>
                                 </button>
                             </div>
                         </div>
                         <div class="team-info-wrapper">
-                            <h2 class="team-name" id="team_name">
-                                Kobis FC
-                            </h2>
-                            <h3 class="manager-name" id="manager_name">Fred Duimby</h3>
+                            <h2 class="team-name" id="team_name">Kobis FC</h2>
+                            <h3 class="manager-name" id="manager_name">
+                                Fred Duimby
+                            </h3>
                         </div>
                     </div>
                 </div>
