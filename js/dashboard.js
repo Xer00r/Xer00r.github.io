@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
     logoutButton.addEventListener("click", logout)
     imageSeelectButton.addEventListener("click", selectImage)
 
-    const { name, manager, _id } = team
+    const { name, manager, _id, profileImageURL } = team
     clubName.textContent = name
     managerName.textContent = manager
 
@@ -32,13 +32,10 @@ window.addEventListener("DOMContentLoaded", () => {
             
             const url = `https://kobis-global-server.herokuapp.com/api/v1/teams/${_id}/profile-image/upload`
 
-            const response = await fetch(url, {
+            await fetch(url, {
                 method: 'POST',
                 body: formData
             })
-
-            const data = await response.json()
-            localStorage.setItem('teamImageURL', JSON.stringify(data))
             
             window.location.href = `./index.html`
             
@@ -47,8 +44,8 @@ window.addEventListener("DOMContentLoaded", () => {
         input.click()
     }
 
-    let imageSRC = JSON.parse(localStorage.getItem("teamImageURL"))
-    profileImage.src = imageSRC.imageURL
+    profileImage.src = profileImageURL
+
     function logout() {
         localStorage.removeItem("team")
         window.location.href = `./login.html`
