@@ -40,10 +40,4 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     profileImage.src = profileImageURL
-    
-
-    function logout() {
-        localStorage.removeItem("team")
-        window.location.href = `./login.html`
-    }
 })
