@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
             const file = e.target.files[0]
             const formData = new FormData()
 
-            formData.append("myImage", file)
+            formData.append("team-profile-image", file)
             formData.append("json", {"hello" : "hello"})
             
             const url = `https://kobis-global-server.herokuapp.com/api/v1/teams/${_id}/profile-image/upload`

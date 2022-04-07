@@ -1,0 +1,104 @@
+.main {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(3, 9, 69);
+    height: 100vh;
+}
+
+.form-wrapper {
+    background-color: rgb(255, 255, 255);
+    width: 50rem;
+    padding: 1rem;
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.form-wrapper .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-wrapper .heading h1 i{
+    font-size: 6rem;
+    color: rgb(3, 9, 69);
+}
+
+.form-wrapper .heading h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-family: Poppins;
+    text-align: center;
+    color: rgb(87, 87, 87);
+    position: relative;
+    top: 1.5rem;
+}
+
+
+.form-wrapper .add-player-form  {
+    width: 90%;
+    margin-top: 1rem;
+}
+
+.form-wrapper .add-player-form .input {
+    display: block;
+    width: 100%;
+    height: 5rem;
+    font-family: Poppins;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgb(146, 146, 146);
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: rgb(41, 41, 41);
+}
+
+.form-wrapper .add-player-form input:nth-child(3) {
+    text-transform: uppercase;
+}
+
+.form-wrapper .add-player-form button {
+    width: 85%;
+    height: 5rem;
+    border-radius: .3rem;
+    background: rgb(44, 44, 255);
+    font-size: 1.7rem;
+    font-family: Poppins;
+    font-weight: 300;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 300ms;
+    margin-top: 3rem;
+}
+
+.form-wrapper .add-player-form button:hover {
+    width: 100%;
+    cursor: pointer;
+}
+
+.form-wrapper .add-player-form button i {
+    font-size: 3rem;
+    position: relative;
+    top: -.3rem;
+    left: 1rem;
+}
+
+@media (max-width: 600px) {
+    .form-wrapper {
+        width: 40rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .form-wrapper {
+        width: 35rem;
+    }
+
+    .form-wrapper .heading h2 {
+        font-size: 2rem;
+    }
+}

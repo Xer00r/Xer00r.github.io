@@ -5,7 +5,6 @@ const mainContent = document.getElementById("main-content")
 let isNavOpen = true
 
 toggleButton.addEventListener("click", e => {
-    console.log("clicked " + Date.now())
     if (!isNavOpen) {
         navbar.classList.add("show-nav")
         mainContent.classList.remove("nav-closed")

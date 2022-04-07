@@ -7,7 +7,7 @@
     <title>Squad</title>
     <link rel="stylesheet" href="./assets/icons/css/all.css">
     <link rel="stylesheet" href="./css/main-dashboard.css">
-    <link rel="stylesheet" href="./css/squad.css">
+    <link rel="stylesheet" href="./css/player.css">
 </head>
 <body>
     <div class="container">
@@ -56,15 +56,22 @@
                 <div class="greeting-wrapper"></div>
             </header>
             <div class="main">
-               <div class="squad-container" id="squad_container">
-                    <div class="player-indicator" id="player_indicator">
-                        <h3>You don’t have any players</h3>
+                <div class="form-wrapper">
+                    <div class="heading">
+                        <h1><i class="fat fa-user"></i></h1>
+                        <h2>Add a player to your team</h2>
                     </div>
-               </div>
+                    <form  class="add-player-form">
+                        <input type="text" name="name" id="player-name" class="input" placeholder="Name">
+                        <input type="number" name="age" id="player-age" class="input" placeholder="Age">
+                        <input type="text" name="position" id="player-position" class="input" placeholder="Position">
+                        <button type="submit">Add Player <i class="fat fa-arrow-right"></i></button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
     <script src="./js/menu.js"></script>
-    <script src="./js/squad.js"></script>
+    <script src="./js/addPlayer.js"></script>
 </body>
 </html>

@@ -1,14 +1,12 @@
-.container {
-    background-color: rgb(10, 1, 52);
-}
 
 .squad-container {
-    background-color: rgb(173, 173, 173);
+    background-color: rgb(219, 219, 219);
     position: relative;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 1rem;
+    overflow-x: hidden;
 }
 
 .squad-container .player-indicator {
@@ -39,8 +37,12 @@
     /* margin-left: 3rem; */
     width: 35rem;
     padding: 2rem 0;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgb(231, 231, 231) 60%, rgb(3, 3, 61) 60%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        0deg,
+        rgb(231, 231, 231) 60%,
+        rgb(3, 3, 61) 60%
+    );
 }
 
 .squad-container .player-card .player-image {
@@ -49,7 +51,35 @@
     border-radius: 50%;
     position: relative;
     left: calc(50% - 10rem);
-    background-color: rgb(195, 195, 195);
+    background-color: rgb(220, 220, 220);
+}
+
+
+.squad-container .player-card .player-image .upload-btn{
+    position: absolute;
+    bottom: 2rem;
+    right: 1.3rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    background-color: rgb(192, 191, 191);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.squad-container .player-card .player-image .upload-btn i {
+    color: rgb(49, 49, 49);
+    font-size: 2rem;
+    background-color: red;
+    position: relative;
+    top: -1.4rem;
+    height: 0;
+}
+
+.squad-container .player-card .player-image img{
+    width: 100%;
+    border-radius: 50%;
 }
 
 .squad-container .player-card .player-info {
@@ -68,7 +98,7 @@
 
 .squad-container .player-card .player-info .player-name {
     font-size: 2.4rem;
-    font-weight: 500;
+    font-weight: 400;
     color: rgb(3, 3, 61);
 }
 
