@@ -1,78 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Squad</title>
-    <link rel="stylesheet" href="./assets/icons/css/all.css">
-    <link rel="stylesheet" href="./css/main-dashboard.css">
-    <link rel="stylesheet" href="./css/player.css">
-</head>
-<body>
-    <div class="container">
-        <div class="sidebar show-nav">
-            <nav class="navigation">
-                <ul class="nav-items">
-                    <li class="nav-link">
-                        <a href="./index.html" title="Dashboard">
-                            <i class="fat fa-home"></i>
-                        </a>
-                    </li>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Squad</title>
+        <link rel="stylesheet" href="./assets/icons/css/all.css" />
+        <link rel="stylesheet" href="./css/main-dashboard.css" />
+        <link rel="stylesheet" href="./css/player.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar show-nav">
+                <nav class="navigation">
+                    <ul class="nav-items">
+                        <li class="nav-link">
+                            <a href="./index.html" title="Dashboard">
+                                <i class="fat fa-home"></i>
+                            </a>
+                        </li>
 
-                    <li class="nav-link">
-                        <a href="./squad.html" title="Squad">
-                            <i class="fat fa-users"></i>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="./add-player.html" title="Add Player">
-                            <i class="fat fa-user"></i>
-                        </a>
-                    </li>
-                    <li class="nav-link" title="Team Settings">
-                        <a href="./team-settings.html">
-                            <i class="fat fa-gear"></i>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="./notifications.html" title="Notifications">
-                            <i class="fat fa-bell"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <footer class="footer">
-                <button class="sign-out-button" id="sign-out-btn">
-                    <i class="fat fa-sign-out-alt"></i>
-                </button>
-            </footer>
-        </div>
-        <div class="main-content" id="main-content">
-            <header class="header">
-                <div class="hamburger">
-                    <span class="burger active"></span>
-                </div>
-                <div class="greeting-wrapper"></div>
-            </header>
-            <div class="main">
-                <div class="form-wrapper">
-                    <div class="heading">
-                        <h1><i class="fat fa-user"></i></h1>
-                        <h2>Add a player to your team</h2>
+                        <li class="nav-link">
+                            <a href="./squad.html" title="Squad">
+                                <i class="fat fa-users"></i>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="./add-player.html" title="Add Player">
+                                <i class="fat fa-user"></i>
+                            </a>
+                        </li>
+                        <li class="nav-link" title="Team Settings">
+                            <a href="./team-settings.html">
+                                <i class="fat fa-gear"></i>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a
+                                href="./notifications.html"
+                                title="Notifications"
+                            >
+                                <i class="fat fa-bell"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <footer class="footer">
+                    <button
+                        class="sign-out-button"
+                        id="sign-out-btn"
+                        onclick="logout()"
+                    >
+                        <i class="fat fa-sign-out-alt"></i>
+                    </button>
+                </footer>
+            </div>
+            <div class="main-content" id="main-content">
+                <header class="header">
+                    <div class="hamburger">
+                        <span class="burger active"></span>
                     </div>
-                    <form  class="add-player-form">
-                        <input type="text" name="name" id="player-name" class="input" placeholder="Name">
-                        <input type="number" name="age" id="player-age" class="input" placeholder="Age">
-                        <input type="text" name="position" id="player-position" class="input" placeholder="Position">
-                        <button type="submit">Add Player <i class="fat fa-arrow-right"></i></button>
-                    </form>
+                    <div class="greeting-wrapper"></div>
+                </header>
+                <div class="main">
+                    <div class="form-wrapper">
+                        <div class="heading">
+                            <h1><i class="fat fa-user"></i></h1>
+                            <h2>Add a player to your team</h2>
+                        </div>
+                        <form class="add-player-form">
+                            <input
+                                type="text"
+                                name="name"
+                                id="player-name"
+                                class="input"
+                                placeholder="Name"
+                            />
+                            <input
+                                type="number"
+                                name="age"
+                                id="player-age"
+                                class="input"
+                                placeholder="Age"
+                            />
+                            <input
+                                type="text"
+                                name="position"
+                                id="player-position"
+                                class="input"
+                                placeholder="Position"
+                            />
+                            <button type="submit">
+                                Add Player <i class="fat fa-arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="./js/menu.js"></script>
-    <script src="./js/addPlayer.js"></script>
-    <script src="./js/logout.js"></script>
-</body>
+        <script src="./js/menu.js"></script>
+        <script src="./js/addPlayer.js"></script>
+        <script>
+            function logout() {
+                localStorage.removeItem("team")
+                localStorage.removeItem("players")
+                window.location.href = `./login.html`
+            }
+        </script>
+    </body>
 </html>

@@ -34,7 +34,7 @@ async function submitForm(e) {
         }
         else if(response.status == 201) {
             console.log(data)
-            // window.location.href = `./add-player.html`
+            window.location.href = `./add-player.html`
         }
     }
 }
