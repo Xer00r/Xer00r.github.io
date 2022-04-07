@@ -17,7 +17,7 @@ async function submitForm(e) {
     }
 
 
-    const url = `http://localhost:5000/api/v1/teams/${team._id}/players/add`
+    const url = `https://kobis-global-server.herokuapp.com/api/v1/teams/${team._id}/players/add`
     const response = await fetch(url, {
         method: 'POST',
         headers: {
