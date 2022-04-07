@@ -68,6 +68,10 @@
     justify-content: center;
 }
 
+.squad-container .player-card .player-image .upload-btn:hover {
+    cursor: pointer;
+}
+
 .squad-container .player-card .player-image .upload-btn i {
     color: rgb(49, 49, 49);
     font-size: 2rem;

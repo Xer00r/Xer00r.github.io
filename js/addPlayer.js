@@ -2,10 +2,13 @@ const form = document.forms[0]
 
 form.addEventListener("submit", submitForm)
 
+
 async function submitForm(e) {
     e.preventDefault()
 
     const formData = new FormData(form)
+
+    const team = JSON.parse(localStorage.getItem('team'))
 
     const playerData = {
         name: formData.get('name'),
@@ -14,7 +17,7 @@ async function submitForm(e) {
     }
 
 
-    const url = `http://localhost:5000/api/v1/teams/123/players/add`
+    const url = `http://localhost:5000/api/v1/teams/${team._id}/players/add`
     const response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -30,8 +33,8 @@ async function submitForm(e) {
             console.log(data.message)
         }
         else if(response.status == 201) {
-            console.log(data.message)
-            window.location.href = `./add-player.html`
+            console.log(data)
+            // window.location.href = `./add-player.html`
         }
     }
 }
