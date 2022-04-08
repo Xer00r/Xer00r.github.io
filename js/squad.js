@@ -13,6 +13,8 @@ window.onload = e => {
             data = await res.json()
             localStorage.setItem("players", JSON.stringify(data))
         }
+
+        window.location.href = './squad.html'
     }
 
     getData()
