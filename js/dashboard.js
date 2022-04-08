@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 body: formData
             })
             
-            window.location.href = `./index.html`
+            window.location.reload()
             
         }
 

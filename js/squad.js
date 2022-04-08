@@ -56,7 +56,7 @@ arrayOfPlayers.forEach(player => {
                 body: formData,
             })
 
-            window.location.href = `./squad.html`
+            window.location.reload()
         }
 
         input.click()
