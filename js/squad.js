@@ -15,6 +15,8 @@ window.onload = e => {
         }
     }
 
+    getData()
+
     let arrayOfPlayers = JSON.parse(localStorage.getItem("players"))
 
     const playerIndicator = document.getElementById("player_indicator")
