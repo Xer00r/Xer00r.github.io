@@ -12,11 +12,8 @@ window.onload = e => {
         if (res.status === 200) {
             data = await res.json()
             localStorage.setItem("players", JSON.stringify(data))
-            console.log('got data ' + Date.now())
         }
     }
-
-    setInterval(getData, 1000)
 
     let arrayOfPlayers = JSON.parse(localStorage.getItem("players"))
 
